@@ -1,0 +1,44 @@
+package com.sort.employee;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class EmployeeSortTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EmployeeModel model = new EmployeeModel(103, 26, "CF");
+		EmployeeModel model1 = new EmployeeModel(100, 24, "ZS");
+		EmployeeModel model2 = new EmployeeModel(102, 28, "YU");
+		EmployeeModel model3 = new EmployeeModel(105, 25, "AB");
+		EmployeeModel model4 = new EmployeeModel(104, 24, "TH");
+		List<EmployeeModel> employeeList = new ArrayList<EmployeeModel>();
+		employeeList.add(model);
+		employeeList.add(model1);
+		employeeList.add(model2);
+		employeeList.add(model3);
+		employeeList.add(model4);
+		/*
+		 * System.out.println("Before Sorting........"); for (EmployeeModel
+		 * employeeListeach : employeeList) {
+		 * System.out.println(employeeListeach.toString()); }
+		 * Collections.sort(employeeList, new Comparator<EmployeeModel>() { public int
+		 * compare(EmployeeModel o1, EmployeeModel o2) { if (o1.getAge() != o2.getAge())
+		 * { return o1.getAge() - o2.getAge(); } else { return
+		 * o1.getName().compareTo(o2.getName()); } } });
+		 * 
+		 * System.out.println("After Sorting........"); for (EmployeeModel
+		 * employeeListeach : employeeList) {
+		 * System.out.println(employeeListeach.toString()); }
+		 */
+
+		System.out.println("Before sorting: " + employeeList);
+
+		Collections.sort(employeeList, new EmployeeSort());
+
+		System.out.println("After sorting: " + employeeList);
+	}
+
+}
