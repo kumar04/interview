@@ -1,0 +1,20 @@
+package com.list.retrive;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class RetrieveSingleLinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<String> list = new LinkedList<String>();
+		list.add("AV");
+		list.add("TU");
+		list.add("BZ");
+		list.add("KU");
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println("List:" + list.get(i));
+		}
+	}
+
+}
